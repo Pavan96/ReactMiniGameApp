@@ -1,1 +1,1 @@
-# ReactNativeGoalApp
+# ReactMiniGameApp
