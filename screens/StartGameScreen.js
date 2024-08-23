@@ -56,7 +56,7 @@ const styles = StyleSheet.create( {
     buttonsConatiner: {
         flexDirection: "row",
         backgroundColor: "#4e0399",
-        flex: 3
+        flex: 2
 
     },
 
