@@ -54,14 +54,11 @@ const styles = StyleSheet.create( {
     },
 
     buttonsConatiner: {
-        flexDirection: "row",
-        backgroundColor: "#4e0399",
-        flex: 2
-
+        flexDirection: "row",       
     },
 
     buttonContiner: {
-        flex: 4
+        flex: 1
     }
 
 });
