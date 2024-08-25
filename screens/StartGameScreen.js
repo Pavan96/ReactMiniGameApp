@@ -2,6 +2,7 @@ import { TextInput, View, StyleSheet, Alert } from "react-native";
 import PrimaryButton from "../components/ui/PrimaryButton";
 import { useState } from "react";
 import Colors from '../constannts/colors';
+import Title from "../components/ui/Title";
 
 
 
@@ -29,25 +30,28 @@ function StartGameScreen({onPickNumber}) {
         onPickNumber(chosenNumber);
     }
 
-    return (<View style={styles.inputContainer}>
-        <TextInput 
-            style= {styles.numberInput} 
-            maxLength={2} 
-            keyboardType="number-pad"
-            autoCapitalize="none"
-            autoCorrect={false}
-            onChangeText={numberInputHandler}
-            value={enteredNumber}
-        />
-        <View style={styles.buttonsConatiner}>
-            <View style={styles.buttonContiner}>
+    return (
+    <View style={styles.rootContainer}>  
+         <Title>Guess My Number</Title>
+         <View style={styles.inputContainer}>
+                <TextInput 
+                style= {styles.numberInput} 
+                maxLength={2} 
+                keyboardType="number-pad"
+                autoCapitalize="none"
+                autoCorrect={false}
+                onChangeText={numberInputHandler}
+                value={enteredNumber}
+                />
+                <View style={styles.buttonsConatiner}>
+                <View style={styles.buttonContiner}>
                 <PrimaryButton onPressButton={resetInputHandler}>Reset</PrimaryButton>
-            </View>
-            <View style={styles.buttonContiner}>
+                </View>
+                <View style={styles.buttonContiner}>
                 <PrimaryButton onPressButton={confirmInputHandler}>Confirm</PrimaryButton>
-            </View>
+                </View>
+               </View>
         </View>
-       
     </View>
     );
 }
@@ -55,6 +59,11 @@ function StartGameScreen({onPickNumber}) {
 export default StartGameScreen;
 
 const styles = StyleSheet.create( {
+    rootContainer: {
+        flex:1,
+        marginTop: 100,
+        alignItems: 'center' 
+    },
     inputContainer: {
         justifyContent: "center",
         alignItems: "center",
