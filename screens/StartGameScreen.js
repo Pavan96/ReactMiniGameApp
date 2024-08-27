@@ -3,7 +3,8 @@ import PrimaryButton from "../components/ui/PrimaryButton";
 import { useState } from "react";
 import Colors from '../constannts/colors';
 import Title from "../components/ui/Title";
-
+import Card from "../components/ui/Card";
+import Instructiontext from "../components/ui/InstructionText";
 
 
 function StartGameScreen({onPickNumber}) { 
@@ -33,7 +34,8 @@ function StartGameScreen({onPickNumber}) {
     return (
     <View style={styles.rootContainer}>  
          <Title>Guess My Number</Title>
-         <View style={styles.inputContainer}>
+         <Card>
+               <Instructiontext>Enter a number</Instructiontext>
                 <TextInput 
                 style= {styles.numberInput} 
                 maxLength={2} 
@@ -51,7 +53,7 @@ function StartGameScreen({onPickNumber}) {
                 <PrimaryButton onPressButton={confirmInputHandler}>Confirm</PrimaryButton>
                 </View>
                </View>
-        </View>
+        </Card>
     </View>
     );
 }
@@ -73,7 +75,7 @@ const styles = StyleSheet.create( {
         borderRadius: 8,
         backgroundColor: Colors.primary800,
         elevation: 4,
-        shadowColor: 'red',
+        shadowColor: 'black',
         shadowOffset: {width: 0, height: 2},
         shadowRadius: 6,
         shadowOpacity: 0.25
@@ -98,5 +100,6 @@ const styles = StyleSheet.create( {
     buttonContiner: {
         flex: 1
     }
+     
 
 });
