@@ -46,6 +46,7 @@ function GameScreen({userNumber, onGameOver}) {
     }
     const newRndNumber = generateRandomBetween(minBoundary, maxBoundary, currentGuess);
     setCurrentGuess(newRndNumber);
+    setGuessRounds();
    }
 
     return <View style={styles.screen}>
